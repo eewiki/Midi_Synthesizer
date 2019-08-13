@@ -1,0 +1,123 @@
+#N canvas -11 -11 1920 956 10;
+#X obj 65 30 notein;
+#X obj 65 55 poly 4 1;
+#X obj 65 80 pack 0 0 0;
+#X obj 61 308 *~;
+#X obj 61 382 dac~;
+#X obj 344 65 vsl 15 128 10 10010 1 1 empty empty A 0 -9 0 10 -262144
+-1 -1 1850 1;
+#X obj 380 66 vsl 15 128 10 10010 1 1 empty empty D 0 -9 0 10 -262144
+-1 -1 1800 1;
+#X obj 415 66 vsl 15 128 0.1 1.1 1 1 empty empty S 0 -9 0 10 -262144
+-1 -1 1700 1;
+#X obj 452 66 vsl 15 128 10 10010 1 1 empty empty R 0 -9 0 10 -262144
+-1 -1 1550 1;
+#X obj 344 203 - 10;
+#X obj 380 202 - 10;
+#X obj 452 202 - 10;
+#X obj 344 226 s a;
+#X obj 380 226 s d;
+#X obj 415 226 s s;
+#X obj 452 227 s r;
+#X obj 136 312 vsl 15 128 0 1 0 1 empty empty 2nd 0 -9 0 10 -262144
+-1 -1 10500 1;
+#X obj 171 312 vsl 15 128 0 1 0 1 empty empty 3rd 0 -9 0 10 -162280
+-1 -1 8350 1;
+#X obj 164 55 bendin;
+#X obj 164 77 - 8192;
+#X obj 164 99 / 4092;
+#X obj 164 120 s b;
+#X obj 415 202 - 10;
+#X obj 197 170 ctlin;
+#X obj 197 201 / 127;
+#X obj 61 355 *~;
+#X obj 204 310 vsl 15 128 0 1 0 1 empty empty 4th 0 -9 0 10 -262144
+-1 -1 6500 1;
+#X obj 237 310 vsl 15 128 0 1 0 0 empty empty 5th 0 -9 0 10 -162280
+-1 -1 3900 1;
+#X obj 271 311 vsl 15 128 0 1 0 0 empty empty 6th 0 -9 0 10 -162280
+-1 -1 2550 1;
+#X obj 306 310 vsl 15 128 0 1 0 0 empty empty 7th 0 -9 0 10 -66577
+-1 -1 0 1;
+#X obj 267 81 vsl 15 128 0.0005 0.05 1 1 empty empty MasterVolume -30
+-9 0 10 -1 -262144 -1 7200 1;
+#X obj 267 218 s V;
+#X obj 76 331 r V;
+#X obj 341 308 vsl 15 128 0 1 0 0 empty empty 8th 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 375 309 vsl 15 128 0 1 0 0 empty empty 9th 0 -9 0 10 -162280
+-1 -1 0 1;
+#X obj 410 309 vsl 15 128 0 1 0 0 empty empty 10th 0 -9 0 10 -162280
+-1 -1 0 1;
+#X obj 450 309 vsl 15 128 0 1 0 0 empty empty 11th 0 -9 0 10 -66577
+-1 -1 0 1;
+#X text 178 278 Harmonic Silders to control the tone;
+#X text 333 33 Volume envolope controll;
+#X obj 136 449 s h2;
+#X obj 171 449 s h3;
+#X obj 204 450 s h4;
+#X obj 237 450 s h5;
+#X obj 271 450 s h6;
+#X obj 306 450 s h7;
+#X obj 410 450 s h10;
+#X obj 450 450 s h11;
+#X obj 341 450 s h8;
+#X obj 375 450 s h9;
+#X msg 165 170 127;
+#X obj 165 146 loadbang;
+#X obj 65 125 note;
+#X obj 83 147 note;
+#X obj 103 169 note;
+#X obj 121 190 note;
+#X obj 500 310 vsl 15 128 0 1 0 0 empty empty 12th 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 500 450 s h12;
+#X obj 65 104 route 1 2 3 4 5;
+#X obj 134 220 note;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 1 2 2 2;
+#X connect 2 0 57 0;
+#X connect 3 0 25 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 7 0 22 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 13 0;
+#X connect 11 0 15 0;
+#X connect 16 0 39 0;
+#X connect 17 0 40 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 22 0 14 0;
+#X connect 23 0 24 0;
+#X connect 24 0 3 1;
+#X connect 25 0 4 0;
+#X connect 25 0 4 1;
+#X connect 26 0 41 0;
+#X connect 27 0 42 0;
+#X connect 28 0 43 0;
+#X connect 29 0 44 0;
+#X connect 30 0 31 0;
+#X connect 32 0 25 1;
+#X connect 33 0 47 0;
+#X connect 34 0 48 0;
+#X connect 35 0 45 0;
+#X connect 36 0 46 0;
+#X connect 49 0 24 0;
+#X connect 50 0 49 0;
+#X connect 51 0 3 0;
+#X connect 52 0 3 0;
+#X connect 53 0 3 0;
+#X connect 54 0 3 0;
+#X connect 55 0 56 0;
+#X connect 57 0 51 0;
+#X connect 57 1 52 0;
+#X connect 57 2 53 0;
+#X connect 57 3 54 0;
+#X connect 57 4 58 0;
+#X connect 58 0 3 0;
